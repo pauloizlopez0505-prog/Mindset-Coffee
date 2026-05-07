@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindset Coffee</title>
+
+<style>
+:root {
+  --bg: #f7f3ef;
+  --brown: #6f4e37;
+  --dark: #1e1e1e;
+  --light: #ffffff;
+  --gray: #666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ddd;
+  padding: 18px 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--brown);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #eee;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: var(--brown);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* SECTION */
+section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--brown);
+}
+
+.section-text {
+  max-width: 700px;
+  margin: auto;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* SCROLLING IMAGES */
+.scroller {
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.scroller-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.scroller img {
+  width: 280px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 280px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: var(--brown);
+}
+
+/* TESTIMONIALS */
+.testimonial {
+  background: white;
+  border-left: 5px solid var(--brown);
+  padding: 25px;
+  text-align: left;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.testimonial p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* CONTACT */
+.contact-box {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: #bbb;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .card,
+  .testimonial {
+    width: 90%;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#about">About</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Mindset Coffee</h1>
+
+    <p>
+      More than just coffee — a place to focus, relax, and recharge.
+      Crafted drinks, cozy vibes, and the perfect atmosphere for your day.
+    </p>
+
+    <a href="#contact" class="btn">Visit Us Today</a>
+  </div>
+</section>
+
+<!-- IMAGE SCROLLER -->
+<section>
+  <h2>Fresh Coffee • Cozy Atmosphere • Great Experience</h2>
+
+  <div class="scroller">
+    <div class="scroller-track">
+
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <h2>Popular Drinks</h2>
+
+  <p class="section-text">
+    Carefully crafted drinks made with quality ingredients and passion.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>☕ Caramel Macchiato</h3>
+      <p>Rich espresso with smooth caramel flavor.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧊 Iced Spanish Latte</h3>
+      <p>Sweet, creamy, and refreshing.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍫 Mocha Latte</h3>
+      <p>Chocolate + coffee perfection.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>Why Customers Love Us</h2>
+
+  <p class="section-text">
+    Mindset Coffee is designed for students, workers, and coffee lovers looking
+    for a relaxing environment and quality drinks.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📶 Free Wi-Fi</h3>
+      <p>Perfect for studying or working.</p>
+    </div>
+
+    <div class="card">
+      <h3>🛋 Cozy Atmosphere</h3>
+      <p>Comfortable seating and relaxing vibes.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌟 Quality Coffee</h3>
+      <p>Freshly prepared drinks every day.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="grid">
+
+    <div class="testimonial">
+      <p>
+        “One of the best cafés I've visited. The atmosphere is super relaxing.”
+      </p>
+
+      <strong>— Local Customer</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        “The coffee tastes amazing and the place feels premium.”
+      </p>
+
+      <strong>— Student Visitor</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        “Perfect place to study while enjoying quality drinks.”
+      </p>
+
+      <strong>— Coffee Lover</strong>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Visit Mindset Coffee</h2>
+
+  <div class="contact-box">
+
+    <p>
+      📍 Your Location Here
+    </p>
+
+    <p>
+      ☎ 0912 345 6789
+    </p>
+
+    <a href="tel:09123456789" class="btn">
+      Call Now
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Mindset Coffee — Crafted with passion.
+</footer>
+
+</body>
+</html>
